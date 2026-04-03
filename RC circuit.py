@@ -33,12 +33,12 @@ CErr = np.sqrt( (dCdt(tArr, resistanceErr, V0, V)*tErr)**2
                 +(dCdV(tArr, resistanceErr, V0, V)*VErr)**2 )
 
 fig, ax = plt.subplots(figsize=(8, 5))
-plt.axhline(y = 1e6 * np.mean(CArr), color = 'tab:red')
+plt.axhline(y = 1e6 * np.mean(CArr), color = 'tab:red', label=r"mean measured capacitance")
 ax.errorbar(x = 1e-3 * resistanceArr, y = 1e6 * CArr, xerr = 1e-3 * resistanceErr, yerr = 1e6 * CErr, fmt='.')
 
 ax.set_xlabel(r"R (kΩ)")
 ax.set_ylabel(r"C (μF)")
-
+plt.legend()
 fig.tight_layout()
 plt.show()
 
