@@ -23,6 +23,15 @@ x_data = [1, 2, 3];
 y_data = [5, 6, 7]
 y_error_bars =  [1, 2, 3]
 
-## Plot the excess counts as a function of time, with some uncertainties
-## and some custom plotting options to improve clarity
 fig, ax = plt.subplots(figsize=(8, 6))
+
+ax.errorbar(xVals, yVals, 
+            fmt='ko', ms=2, ecolor='pink', yerr=yErrorBars)
+
+ax.set_xlabel(r"log(frequency)")
+ax.set_ylabel(r"Decibel ratio of output to input amplitude")
+
+fig.tight_layout()
+
+plt.axhline(y=-3, color='green', linestyle='--', label='Corner Frequency')
+plt.show()
