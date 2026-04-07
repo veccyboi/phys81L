@@ -1,5 +1,7 @@
-// amplitude graph
+#amplitude graph
 import math;
+import numpy as np
+import matplotlib.pyplot as plt
 raw_frequency = [1, 3, 10, 31, 60, 80, 100, 133.35, 177.83, 237.14, 316.23, 421.7, 562.34, 749.89, 1000, 1333.5, 1778.3, 2371.4, 3162.3, 4217, 5623.4, 7498.9, 10000];
 raw_amplitude = [3.719, 3.719, 3.719, 3.656, 3.500, 3.312, 3.156, 2.844, 2.469, 2.062, 1.688, 1.344, 1.031, 0.7812, 0.5938, 0.4375, 0.3438, 0.25, 0.1688, 0.1563, 0.1156, 0.08753, 0.06875];
 amplitude_systematic_uncertainty = [0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.031, 0.0031, 0.0031, 0.0031, 0.0016, 0.0016];
@@ -37,9 +39,8 @@ fig.tight_layout()
 plt.axhline(y=-3, color='green', linestyle='--', label='Corner Frequency')
 plt.show()
 
-\\ phase shift graph
+#phase shift graph
 
-import math;
 frequency = [1, 10, 100, 177.83, 316, 1000, 3162, 10000];
 time_delay = [0, 1000, 920, 770, 570, 200, 74, 23];
 time_delay_uncertainty = [1000, 100, 20, 10, 10, 2, 1, 0.2];
