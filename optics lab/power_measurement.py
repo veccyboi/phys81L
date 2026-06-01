@@ -24,3 +24,6 @@ def dPdV(R, ρ):
 print(f"power of the red laser is {P(redMean, R, ρAt639):.3g} ± {redStdErr * dPdV(R, ρAt639):.3g}")
 print(f"power of the green laser is {P(greenMean, R, ρAt520):.3g} ± {greenStdErr * dPdV(R, ρAt520):.3g}")
 print(f"background power: {P(backgroundMean, R, 0.426)} ± {np.std(backgroundData, ddof=1):.3g}")
+
+
+print(f"{backgroundMean:.7g} ± {backgroundStdErr:.7g}")
